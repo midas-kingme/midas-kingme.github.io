@@ -15,6 +15,7 @@ dist-ssr
 .firebase
 .firebase/firebaseConfig.js
 templates
+notes
 
 # Editor directories and files
 .vscode/*
