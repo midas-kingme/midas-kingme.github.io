@@ -1,0 +1,58 @@
+html {
+    background-color: #FFFDF8;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: #1E1E1E;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "PT Serif", serif;
+    margin-bottom: 16px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 64px auto;
+    padding: 0 16px;
+}
+
+.back-link {
+    margin-bottom: 32px;
+}
+
+.back-link a {
+    text-decoration: none;
+    color: #2243B6;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin: 16px 0;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ul,
+ol {
+    margin: 16px 0 16px 24px;
+}
+
+blockquote {
+    margin: 24px 0;
+    padding-left: 16px;
+    border-left: 3px solid #B9484E;
+    color: #444;
+    font-style: italic;
+}
