@@ -1,9 +1,16 @@
-html {
-	background-color: #FAF9F5;
+:root {
+	--bg-color: #FAF9F5;
+	--text-color: #1E1E1E;
+	--link-color: inherit;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
 	font-family: 'Source Serif 4', serif;
 	font-size: 1.1em;
 	line-height: 1.5em;
-	color: #1E1E1E;
+	transition: background-color 0.3s, color 0.3s;
 }
 
 h1,
@@ -45,6 +52,10 @@ h2 {
 	color: #262b30;
 }
 
+.neutral {
+	color: inherit;
+}
+
 .purple {
 	color: #833AB4;
 }
@@ -64,7 +75,7 @@ h2 {
 }
 
 .writing-list a {
-	color: inherit;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
@@ -78,4 +89,31 @@ h2 {
 
 em {
 	font-style: italic;
+}
+
+body.dark-mode {
+	--bg-color: #262624;
+	--text-color: #FAF9F5;
+	--link-color: #FAF9F5;
+}
+
+/* Dark mode toggle styles */
+.theme-toggle {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+}
+
+.theme-toggle button {
+	background: none;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	padding: 0.5rem;
+	cursor: pointer;
+	font-size: 1.2rem;
+	transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .theme-toggle button {
+	border-color: #FAF9F5;
 }
