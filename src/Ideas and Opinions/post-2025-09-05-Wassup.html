@@ -4,6 +4,13 @@
 <head>
   <title>Wassup, World > midas ⡷neural interface•.⠐⢾ </title>
 
+  <!-- Apply theme immediately to prevent flash -->
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark-mode");
+    }
+  </script>
+
   <!-- Styles with versioning -->
   <link rel="stylesheet" href="post-styles.css">
 
@@ -16,6 +23,11 @@
 </head>
 
 <body>
+  <!-- Dark mode toggle -->
+  <div class="theme-toggle">
+    <button id="themeToggle">🌙</button>
+  </div>
+
   <div class="container">
     <!-- back to homepage -->
     <div class="back-link">
@@ -45,6 +57,31 @@
 
     <p>That's it for now. Stay tuned ✍🏾</p>
   </div>
+
+  <!-- Theme toggle script -->
+  <script>
+    const toggleButton = document.getElementById("themeToggle");
+    const body = document.body;
+
+    // Apply saved theme
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+      toggleButton.textContent = "☀️";
+    }
+
+    // Toggle functionality
+    toggleButton.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        toggleButton.textContent = "☀️";
+      } else {
+        localStorage.setItem("theme", "light");
+        toggleButton.textContent = "🌙";
+      }
+    });
+  </script>
 </body>
 
 </html>
